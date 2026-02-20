@@ -2,22 +2,25 @@ package com.narxoz.rpg.factory;
 
 import com.narxoz.rpg.combat.*;
 import com.narxoz.rpg.loot.*;
+
 import java.util.ArrayList;
 import java.util.List;
-public class FireComponentFactory implements EnemyComponentFactory {
+
+public class IceComponentFactory implements EnemyComponentFactory {
+
     @Override
     public List<Ability> createAbilities() {
         List<Ability> list = new ArrayList<>();
-        list.add(new FlameBreath());
+        list.add(new FrostBreath());
         return list;
     }
     @Override
     public String createAI() {
-        return "Aggressive Fire AI";
+        return "Defensive Ice AI";
     }
 
     @Override
     public LootTable createLootTable() {
-        return new FireLootTable();
+        return new IceLootTable();
     }
 }

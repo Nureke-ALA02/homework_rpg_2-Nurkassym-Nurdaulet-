@@ -4,8 +4,10 @@ public class FlameBreath implements Ability {
     @Override public String getName(){
         return "Flame Breath";
     }
-    @Override public int getDamege(){
-        return 50;
+
+    @Override
+    public int getDamage() {
+        return 0;
     }
     @Override public String getDescription(){
         return "AoE fire damage+ burn";

@@ -1,5 +1,5 @@
 package com.narxoz.rpg.builder;
-import com.narxoz.rpg.abstractfactory.EnemyComponentFactory;
+import com.narxoz.rpg.factory.EnemyComponentFactory;
 import com.narxoz.rpg.enemy.Enemy;
 
 public class EnemyDirector {

@@ -6,4 +6,6 @@ public interface LootTable extends Cloneable {
     int getGoldDrop();
     int getExperienceDrop();
     LootTable clone();
+    void displayLoot();
+    String getLootInfo();
 }
