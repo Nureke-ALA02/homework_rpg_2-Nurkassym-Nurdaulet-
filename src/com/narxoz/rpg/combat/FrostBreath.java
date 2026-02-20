@@ -11,12 +11,6 @@ public class FrostBreath implements Ability {
     public int getDamage() {
         return 0;
     }
-
-    @Override
-    public String getDescription() {
-        return "";
-    }
-
     public Ability clone() {
         return new FrostBreath();
     }

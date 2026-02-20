@@ -57,12 +57,15 @@ public class DragonBoss implements Enemy {
         for (Ability ability : abilities) {
             System.out.println("- " + ability.getName());
         }
-
         if (lootTable != null) {
+            System.out.println("Gold Drop: " + lootTable.getGoldDrop());
+            System.out.println("Experience Drop: " + lootTable.getExperienceDrop());
+            System.out.println("Items: " + lootTable.getItems());
             lootTable.displayLoot();
+
+            System.out.println("Loot Summary: " + lootTable.getLootInfo());
         }
     }
-
     @Override
     public Enemy clone() {
         DragonBoss copy = new DragonBoss(this.name, this.health);

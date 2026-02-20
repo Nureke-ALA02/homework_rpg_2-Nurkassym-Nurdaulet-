@@ -12,11 +12,6 @@ public class ShadowStrike implements Ability {
     }
 
     @Override
-    public String getDescription() {
-        return "";
-    }
-
-    @Override
     public Ability clone() {
         return null;
     }

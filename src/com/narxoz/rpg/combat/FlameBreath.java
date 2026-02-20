@@ -9,9 +9,6 @@ public class FlameBreath implements Ability {
     public int getDamage() {
         return 0;
     }
-    @Override public String getDescription(){
-        return "AoE fire damage+ burn";
-    }
     @Override public Ability clone(){
         return new FlameBreath();
     }

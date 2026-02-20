@@ -12,7 +12,16 @@ public class Main {
         EnemyBuilder builder = new DragonBossBuilder();
         Enemy fireDragon = director.createFireDragon(builder, fireFactory);
 
-        Goblin goblin = new Goblin("Forest Goblin");
+        EnemyBuilder goblinBuilder = new GoblinBuilder();
+        Enemy goblin = goblinBuilder
+                .setName("Forest Goblin")
+                .setHealth(200)
+                .setDamage(25)
+                .setElement("EARTH")
+                .setAI("Simple Aggressive AI")
+                .build();
+        goblin.displayInfo();
+
         EnemyRegistry registry = new EnemyRegistry();
         registry.registerTemplate("fireDragon", fireDragon);
 
