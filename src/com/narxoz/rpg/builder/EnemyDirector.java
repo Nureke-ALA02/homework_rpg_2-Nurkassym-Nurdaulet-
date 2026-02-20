@@ -14,4 +14,16 @@ public class EnemyDirector {
                 .setAI(factory.createAI())
                 .build();
     }
+    public Enemy createEarthGoblin(EnemyBuilder builder, EnemyComponentFactory factory) {
+        return builder
+                .setName("Forest Goblin")
+                .setHealth(200)
+                .setDamage(25)
+                .setElement("Fire")
+                .setAI(factory.createAI())
+                .setAbilities(factory.createAbilities())
+                .setLootTable(factory.createLootTable())
+                .build();
+    }
+
 }
