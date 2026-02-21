@@ -53,7 +53,7 @@ public class Goblin implements Enemy {
 
     @Override
     public void displayInfo() {
-        System.out.println("=== Goblin ===");
+        System.out.println("Goblin:");
         System.out.println("Name: " + name);
         System.out.println("Health: " + health);
         System.out.println("Damage: " + damage);
