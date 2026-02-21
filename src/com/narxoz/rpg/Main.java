@@ -11,7 +11,7 @@ public class Main {
         EnemyBuilder dragonBuilder = new DragonBossBuilder();
         Enemy fireDragon = director.createFireDragon(dragonBuilder, fireFactory);
 
-        EnemyComponentFactory earthFactory = new FireComponentFactory();
+        EnemyComponentFactory earthFactory = new IceComponentFactory();
         EnemyBuilder goblinBuilder = new GoblinBuilder();
         Enemy goblin = director.createEarthGoblin(goblinBuilder, earthFactory);
 
