@@ -6,18 +6,29 @@ import com.narxoz.rpg.factory.*;
 import com.narxoz.rpg.prototype.EnemyRegistry;
 public class Main {
     public static void main(String[] args) {
-
         EnemyDirector director = new EnemyDirector();
         EnemyComponentFactory fireFactory = new FireComponentFactory();
         EnemyBuilder dragonBuilder = new DragonBossBuilder();
         Enemy fireDragon = director.createFireDragon(dragonBuilder, fireFactory);
 
-        EnemyComponentFactory iceFactory = new IceComponentFactory();
+        EnemyComponentFactory earthFactory = new FireComponentFactory();
         EnemyBuilder goblinBuilder = new GoblinBuilder();
-        Enemy goblin = director.createEarthGoblin(goblinBuilder, iceFactory);
+        Enemy goblin = director.createEarthGoblin(goblinBuilder, earthFactory);
 
-        goblin.displayInfo();
-        System.out.println();
+        EnemyRegistry registry = new EnemyRegistry();
+        registry.registerTemplate("dragon", fireDragon);
+        registry.registerTemplate("goblin", goblin);
+
+        Enemy clonedDragon = registry.createFromTemplate("dragon");
+        Enemy clonedGoblin = registry.createFromTemplate("goblin");
+
+        System.out.println("ORIGINAL DRAGON:");
         fireDragon.displayInfo();
+        System.out.println("\nCLONED DRAGON:");
+        clonedDragon.displayInfo();
+        System.out.println("\nORIGINAL GOBLIN: ");
+        goblin.displayInfo();
+        System.out.println("\nCLONED GOBLIN:");
+        clonedGoblin.displayInfo();
     }
 }
